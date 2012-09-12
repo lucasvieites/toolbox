@@ -40,11 +40,11 @@ function debug($name) {
  * @return string containing the formatted date
  */
 function cdx_conv_date($date, $separator="/") {
-	if (@preg_match("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2}) ([0-9]{2}):([0-9]{2}):([0-9]{2})", $date, $regs)) {
+	if (@preg_match("/([0-9]{4})-([0-9]{1,2})-([0-9]{1,2}) ([0-9]{2}):([0-9]{2}):([0-9]{2})/", $date, $regs)) {
 		return $regs[3].$separator.$regs[2].$separator.$regs[1]." ".$regs[4].":".$regs[5].":".$regs[6];
 	} else {
 		// If the parameter is not correctly formatted it remains the same
-		return $date;
+		return "ERROR: Not formatted: &quot;$date&quot;";
 	}
 }
 
@@ -73,7 +73,7 @@ function cdx_put_select($name, $array_values, $marked="", $extra="") {
 		$string .= "</select>\n";
 	} else {
 		// Return an error string
-		$string .= "cdx_put_select() - Error 2002";
+		$string .= "cdx_put_select() - Error: input is not an array";
 	}
 	return $string;
 }
@@ -111,7 +111,7 @@ function cdx_date_select($default, $prefix, $order='asc', $extra="") {
 		$default = date("0000-00-00");
 	}
 	// Decompose the default date
-	list($este_anyo, $este_mes, $este_dia) = explode('/-/', $default);
+	list($este_anyo, $este_mes, $este_dia) = explode('-', $default);
 
 	if (checkdate($este_mes, $este_dia, $este_anyo) || $default == "0000-00-00") {
 		// If the date is valid, create the <select>s 
