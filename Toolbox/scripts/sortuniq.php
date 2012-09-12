@@ -1,5 +1,5 @@
 <?php
-include ('functions.php');
+include 'functions.php';
 $debug = 0;
 $thestring = "";
 
@@ -19,17 +19,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <html>
 <head>
-<title>Sort text and remove duplicates</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Sort text and remove duplicates</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
-	<p>Paste your text in here:</p>
-	<form name="sortuniq" action="<?php echo $_SERVER['PHP_SELF']; ?>"
-		method="post">
-		<textarea name="thestring" rows="35" cols="100" wrap="hard">
-			<?php echo $thestring;?>
-		</textarea>
-		<br /> <input type="submit" value="Sort and unique" />
+	<p>This script sorts the entered text's lines and removes duplicate lines.</p>
+	<p>Enter your text in here:</p>
+	<form name="sortuniq" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+		<textarea name="thestring" rows="35" cols="100" wrap="hard"><?php echo $thestring;?></textarea>
+		<br />
+		<input type="submit" value="Sort and unique" />
 	</form>
 </body>
 </html>
