@@ -13,7 +13,7 @@ This script converts a [UNIX timestamp](http://en.wikipedia.org/wiki/Timestamp) 
 
 ### sortuniq.php - Sort text and remove duplicates
 
-This script sorts the entered text's lines and removes duplicate lines.
+This script sorts the lines of the entered text and removes duplicates. Basically it's the same as what ```cat file.txt | sort | uniq``` would do on a bash command line.
 
 ### functions.php
 
