@@ -24,7 +24,7 @@ A collection of PHP functions I have used in my websites
 Usage samples for the functions in functions.php
 
 ## Bash-scripts
-### svg_preview.sh - creates PNG foles from SVG
+### svg_preview.sh - creates PNG files from SVG
 
 Traverses a directory structure, down to a configurable depth, looking for SVG files and creating a PNG image preview from all SVGs it finds.
 
