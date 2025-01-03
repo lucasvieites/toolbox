@@ -1,0 +1,18 @@
+matches:
+- trigger: ;;ul
+  replace: |-
+    <ul>
+    <li>$|$</li>
+    </ul>
+- trigger: ;;ol
+  replace: |-
+    <ol>
+    <li>$|$</li>
+    </ol>
+- trigger: ;;li
+  replace: |
+    <li>$|$</li>
+- trigger: ;;a
+  replace: <a href="">$|$</a>
+- trigger: ;;br
+  replace: <br/>

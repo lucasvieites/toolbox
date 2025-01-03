@@ -1,0 +1,25 @@
+matches:
+- trigger: ;ene
+  replace: ñ
+- trigger: ;ENE
+  replace: Ñ
+- trigger: ;ac
+  replace: á
+- trigger: ;ec
+  replace: é
+- trigger: ;ic
+  replace: í
+- trigger: ;oc
+  replace: ó
+- trigger: ;uc
+  replace: ú
+- trigger: ;AC
+  replace: Á
+- trigger: ;EC
+  replace: É
+- trigger: ;IC
+  replace: Í
+- trigger: ;OC
+  replace: Ó
+- trigger: ;UC
+  replace: Ú
