@@ -24,8 +24,33 @@ A collection of PHP functions I have used in my websites
 Usage samples for the functions in functions.php
 
 ## Bash-scripts
+
+Examples of bash scripts that use as templates for more complicated scripts.
+
 ### svg_preview.sh - creates PNG files from SVG
 
 Traverses a directory structure, down to a configurable depth, looking for SVG files and creating a PNG image preview from all SVGs it finds.
 
 It checks if a preview already exists and only creates a new one if the PNG is older than the SVG.
+
+## Config_files
+
+A collections of config files that I use on multiple machines, including [espanso](https://espanso.org) triggers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
