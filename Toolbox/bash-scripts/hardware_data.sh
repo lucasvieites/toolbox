@@ -28,3 +28,7 @@ for data in $DMI_STRINGS; do
 	echo -n "$data -> "
 	/usr/sbin/dmidecode -s $data
 done
+
+num_cores=`cat /proc/cpuinfo | grep processor | wc -l`
+echo ""
+echo "Number of processor cores: " $num_cores
