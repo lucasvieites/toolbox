@@ -1,6 +1,13 @@
 #!/bin/bash
 # Uses dmidecode to fetch hardware data
 # DMI_STRINGS is obtained running "/usr/sbin/dmidecode -s"
+
+# This scripts needs to be run as root or with sudo
+if [ "$EUID" -ne 0 ]
+  then echo "Please run with root privileges (sudo)"
+  exit
+fi
+
 DMI_STRINGS="bios-vendor
 bios-version
 bios-release-date
