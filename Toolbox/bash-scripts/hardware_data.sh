@@ -32,3 +32,5 @@ done
 num_cores=`cat /proc/cpuinfo | grep processor | wc -l`
 echo ""
 echo "Number of processor cores: " $num_cores
+
+echo "RAM size: " `free -h | gawk  '/Mem:/{print $2}'`
