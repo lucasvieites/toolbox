@@ -1,14 +1,13 @@
 alias ls='ls --color=auto'
-alias l='ls'
-alias ll='ls -l'
-alias lh='ls -lh'
+alias l='ls -CF'
+alias ll='ls -laF'
 alias la='ls -la'
+alias lh='ls -lh'
 alias rm='rm -i'
 alias n='nautilus . &'
 alias ilocate='locate -i'
 alias dirdiff='diff -r --brief'
-alias gv='gvim'
-alias rxvt='urxvt'
+alias vi='vim'
 alias webthis='python -m SimpleHTTPServer'
 alias mysql='mysql --default-character-set=utf8'
 alias ssh='ssh -o StrictHostKeyChecking=no'
@@ -18,4 +17,3 @@ alias upd='sudo dnf update'
 alias duso='sudo'
 alias getip="ip route get 8.8.8.8 | awk -F\"src \" 'NR==1{split(\$2,a,\" \");print a[1]}'"
 alias yt3mp3="yt-dlp -ciwx --audio-format mp3 --output '%(title)s.%(ext)s'"
-
