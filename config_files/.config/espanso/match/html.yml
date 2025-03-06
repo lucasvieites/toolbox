@@ -12,7 +12,19 @@ matches:
 - trigger: ;;li
   replace: |
     <li>$|$</li>
+- trigger: ;;p
+  replace: <p>$|$</p>
 - trigger: ;;a
-  replace: <a href="">$|$</a>
+  replace: <a href="{{clipboard}}">$|$</a>
+- trigger: ;;b
+  replace: <strong>$|$</strong>
+- trigger: ;;i
+  replace: <i>$|$</i>
+- trigger: ;;-
+  replace: <u>$|$</u>
+- trigger: ;;q
+  replace: <blockquote>$|$</blockquote>
 - trigger: ;;br
   replace: <br/>
+- trigger: ;;img
+  replace: <img src="$|$" />
