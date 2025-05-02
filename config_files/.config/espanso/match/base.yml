@@ -10,31 +10,38 @@
 
 # yaml-language-server: $schema=https://raw.githubusercontent.com/espanso/espanso/dev/schemas/match.schema.json
 
+global_vars:
+  - name: today
+    type: date
+    params:
+      format: "%Y-%m-%d"
+
+
 matches:
   # Simple text replacement
-  - trigger: ":espanso"
+  - trigger: ";espanso"
     replace: "Hi there!"
 
   # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
 
   # But matches can also be dynamic:
 
-  # Print the current date
-  - trigger: ":date"
-    replace: "{{mydate}}"
-    vars:
-      - name: mydate
-        type: date
-        params:
-          format: "%m/%d/%Y"
-
-  # Print the output of a shell command
-  - trigger: ":shell"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: shell
-        params:
-          cmd: "echo 'Hello from your shell'"
-
   # And much more! For more information, visit the docs: https://espanso.org/docs/
+  - trigger: ";lvf"
+    replace: "Lucas Vieites"
+  - trigger: ";lvb"
+    replace: "lucas.vieitesfarina@booking.com"
+  - trigger: ";lvr"
+    replace: "[{{today}}] Lucas Vieites"
+
+  - trigger: ";sn"
+    replace: "ServiceNow"
+
+  - trigger: ";oob"
+    replace: "out-of-box"
+
+  - trigger: ";euro"
+    replace: "\u20ac"
+
+  - trigger: ";dlps"
+    replace: "Destination LPS"
