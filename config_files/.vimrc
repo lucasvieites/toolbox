@@ -22,11 +22,10 @@ set shiftwidth=2
 syn on
 
 " Type syntax
-set syn=php
+"set syn=html
 
 " Color
 color desert
-colorscheme gruvbox
 
 " Write contents of the file, if it has been modified, on buffer exit
 set autowrite
